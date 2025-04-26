@@ -1,0 +1,82 @@
+.inputTask {
+  display: grid;
+  grid-template-columns: 1fr 50px 50px;
+  margin-bottom: 15px;
+  background: var(--background-color-input);
+  border-radius: 5px;
+  padding-right: 15px;
+  transition: transform 0.5s ease;
+
+  &Completed {
+    background: var(--background-color-input);
+  }
+
+  &.moving {
+    transform: translateY(50px);
+    opacity: 0.5;
+  }
+
+  &Label {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    padding: 12px 15px;
+    cursor: pointer;
+  }
+
+  &Checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+
+  &Title {
+    padding: 5px;
+    overflow-wrap: break-word;
+    overflow: hidden;
+    line-height: 1.2;
+    &Completed {
+      text-decoration: line-through;
+    }
+  }
+
+  &TitleEdit {
+    font: 1rem/1em "Roboto", sans-serif;
+    border: none;
+    padding: 5px;
+    background: none;
+    box-shadow: 0 4px 0 -3px #3f72af;
+  }
+
+  &Edit,
+  &Remove,
+  &Save {
+    display: block;
+    border: none;
+    background: none no-repeat center center;
+    cursor: pointer;
+    padding: 0;
+    transition: opacity 0.3s;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &Edit {
+    background-image: url("./images/edit.svg");
+  }
+
+  &Remove {
+    background-image: url("./images/trash.svg");
+  }
+
+  &Save {
+    background-image: url("./images/check.svg");
+  }
+}
+
+@media (max-width: 700px) {
+  .inputTaskTitle {
+    max-width: 180px;
+  }
+}

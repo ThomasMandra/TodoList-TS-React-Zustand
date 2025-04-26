@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Roboto:wght@400;500&display=swap");
+
+body {
+  --background-color-body: #3f72af;
+  --background-color: white;
+  --background-color-input: #dbe2ef;
+  --color-text: rgb(0, 0, 0);
+
+  font: 16px/1.4 "Roboto", sans-serif;
+  background: var(--background-color-body);
+  min-height: 100vh;
+  padding: 1rem;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.dark {
+  --background-color-body: #181717;
+  --background-color: rgb(70, 69, 69);
+  --background-color-input: #2f3031;
+  --color-text: white;
+}
